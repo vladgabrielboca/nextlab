@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing Background</title>
+    <style>
+        .modern-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(145deg, #6b48ff, #3498db);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+        .modern-button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <button class="modern-button" onclick="changeColor()">Change Background Color</button>
+    </center>
+
+    <script>
+        function changeColor() {
+            const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEEAD', '#D4A5A5'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
